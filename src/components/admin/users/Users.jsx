@@ -37,11 +37,11 @@ dispatch(getAllUsers())
   function Row({ele,updatehandler,deletehandler,loading}){
        return (
         <Tr>
-          <Td>{ele._id}</Td>
-          <Td>{ele.name}</Td>
-          <Td>{ele.email}</Td>
-          <Td>{ele.role}</Td>
-          <Td>{
+       
+          <Td p={'1'} py={'8'}>{ele.name}</Td>
+          <Td p={'1'} py={'8'}>{ele.email}</Td>
+          <Td p={'1'} py={'8'}>{ele.role}</Td>
+          <Td p={'1'} py={'8'}>{
    ele.subscription && ele.subscription.status==="active" ? "Active" :"Not active"}</Td>
           <Td isNumeric>
             <HStack justifyContent={"flex-end"}>
@@ -61,34 +61,30 @@ loading ? <Loader /> :
 
     <>
       <Slidebar />
-   <Box p={["0","16"]} overflowX="auto"
+   <Box p={["1","7"]} overflowX="auto"
    pt={["8","16"]}
    >
     <Heading children="ALL USERS" ml={['5','0']} mb={['5',"10px"]} fontSize={['large','larger']}/>
    
     <TableContainer w={["100vw","full"]} h={'90vh'} overflowY={'scroll'}>
 <Table variant={"simple"} size="lg">
-<TableCaption>
-  All available users in the database
-</TableCaption>
+
 <Thead>
   <Tr>
-    <Th>
-      Id
-    </Th>
-    <Th>
+ 
+    <Th p={'1'}>
      Name
     </Th>
-    <Th>
+    <Th p={'1'}>
      Email
     </Th>
-    <Th>
+    <Th p={'1'}>
      Role
     </Th>
-    <Th>
+    <Th p={'1'}>
       Subscription
     </Th>
-    <Th isNumeric>
+    <Th p={'1'} isNumeric>
       Change Role
     </Th>
   </Tr>

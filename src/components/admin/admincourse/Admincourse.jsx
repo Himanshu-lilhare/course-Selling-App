@@ -1,4 +1,4 @@
-import { Box, Button, Grid, Heading, HStack, Image, Table, TableCaption, TableContainer, Tbody, Td, Th, Thead, Tr, useDisclosure } from '@chakra-ui/react'
+import { Box, Button,  Heading, HStack,  Table,  TableContainer, Tbody, Td, Th, Thead, Tr, useDisclosure } from '@chakra-ui/react'
 import React from 'react'
 import { useState } from 'react'
 import { useEffect } from 'react'
@@ -83,24 +83,20 @@ if(message){
   function Row({ele,updatehandler,deletecoursehandler,loading}){
     
        return (
-        <Tr>
-          <Td>{ele._id}</Td>
-          <Td>{ele.title}</Td>
-          <Td>
-            <Image src={ele.poster.url}/>
-          </Td>
-          <Td>
+        <Tr fontSize={['sm','md']}>
+        
+          <Td p={'1'} py={'8'}>{ele.title}</Td>
+        
+          <Td p={'1'} py={'8'}>
        {ele.category}
           </Td>
-          <Td>
-            {ele.createdby}
-          </Td>
-          <Td isNumeric>{ele.views}</Td>
-          <Td isNumeric>
+          
+          <Td p={'1'} py={'8'} isNumeric>{ele.views}</Td>
+          <Td p={'1'}  py={'8'} isNumeric>
             {ele.noOfVideos}
           </Td>
           
-          <Td isNumeric>
+          <Td p={'1'} py={'8'} isNumeric>
             <HStack justifyContent={"flex-end"}>
 <Button variant={"outline"} colorScheme="purple.500" onClick={()=>courseviewhandler(ele._id,ele.title,onOpen)}>
   View lecture
@@ -116,8 +112,9 @@ if(message){
   return (
     <>
     <Slidebar />
-   <Box p={["0","16"]} overflowX="auto"
-   pt={["8","16"]}
+   <Box p={["1","6"]} overflowX="auto"
+   py={["1","16"]}
+   
    >
     <Heading children="ALL COURSE" ml={['5','0']} mb={['5',"10px"]} fontSize={['large','larger']}/>
     <TableContainer w={["100vw","full"]}>
@@ -125,28 +122,22 @@ if(message){
 
 <Thead>
   <Tr>
-    <Th>
-      Id
-    </Th>
-    <Th>
+   
+    <Th p={'1'}>
      Title
     </Th>
-    <Th>
-     Poster
-    </Th>
-    <Th>
+   
+    <Th p={'1'}>
       Category
     </Th>
-    <Th>
-     Creator
-    </Th>
-    <Th isNumeric>
+   
+    <Th p={'1'} isNumeric>
       Impressions
     </Th>
-    <Th isNumeric>
+    <Th p={'1'} isNumeric>
       Lectures
     </Th>
-    <Th isNumeric>
+    <Th p={'1'} isNumeric>
       Delete
     </Th>
   </Tr>

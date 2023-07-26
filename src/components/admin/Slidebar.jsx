@@ -22,10 +22,11 @@ const Slidebar = () => {
   return (
     <HStack
       boxShadow={'-2px 0 10px rgba(107,70,193,0.5)'}
-      spacing={'8'}
+      spacing={['2','8']}
       padding="6"
       justifyContent={"center"}
-      margin={['10','0']}
+      margin={['2.5','0']}
+      mt={['10','0']}
     >
       <Linkbutton
         url="admincourses"
