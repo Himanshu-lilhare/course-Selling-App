@@ -2,7 +2,7 @@ import { Button, Drawer, DrawerBody, DrawerContent, DrawerHeader, DrawerOverlay,
 import React from 'react';
 import { ColorModeSwitcher } from '../../../ColorModeSwitcher';
 import './header.css';
-import {  RiDashboard3Fill, RiLoginBoxLine, RiMenu5Fill } from 'react-icons/ri';
+import {   RiLoginBoxLine, RiMenu5Fill } from 'react-icons/ri';
 import { Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { loogut } from '../../../redux/actions/userAction';

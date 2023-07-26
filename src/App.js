@@ -10,9 +10,9 @@ import toast, { Toaster } from 'react-hot-toast';
 import { getmyprofile } from './redux/actions/userAction';
 import { ProtectedRoute } from 'protected-route-react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { Profiler } from 'react';
+
 const Header = React.lazy(() => import('./components/layout/header/Header'));
-// React.lazy(()=>import())
+
 const Courses = React.lazy(() => import('./components/courses/Courses'));
 const Footer = React.lazy(() => import('./components/layout/footer/Footer'));
 
@@ -48,9 +48,7 @@ const Admincourse = React.lazy(() =>
 );
 const Users = React.lazy(() => import('./components/admin/users/Users'));
 
-// window.addEventListener("contextmenu",(e)=>{
-//   e.preventDefault()
-// })
+
 function App() {
   const { isauthenticate, user, error, message, loading } = useSelector(
     state => state.user
