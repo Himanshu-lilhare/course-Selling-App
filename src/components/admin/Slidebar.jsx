@@ -2,17 +2,17 @@ import { Button, HStack, VStack } from '@chakra-ui/react';
 import React from 'react';
 import {
   RiAddCircleFill,
-  RiDashboardFill,
+
   RiEyeFill,
   RiUserFill,
 } from 'react-icons/ri';
 import { NavLink, useLocation } from 'react-router-dom';
 
-function Linkbutton({ url, text, icon, active }) {
+function Linkbutton({ url,text,active }) {
   return (
     <NavLink to={`/admin/${url}`}>
       <Button p={['1','2']} fontSize={['sm','larger']} colorScheme={active ? 'blue' : 'gray'}>
-        {icon} {`...${text}`}
+        {`${text}`}
       </Button>
     </NavLink>
   );
@@ -31,20 +31,20 @@ const Slidebar = () => {
       <Linkbutton
         url="admincourses"
         text="Courses"
-        icon={<RiEyeFill />}
+       
         active={location.pathname === '/admin/admincourses'}
       />
       <Linkbutton
         url="users"
         text="Users"
-        icon={<RiUserFill />}
+      
         active={location.pathname === '/admin/users'}
       />
 
       <Linkbutton
         url="createcourse"
         text="Create Course"
-        icon={<RiAddCircleFill />}
+       
         active={location.pathname === '/admin/createcourse'}
       />
     </HStack>
