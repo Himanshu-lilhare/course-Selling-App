@@ -5,8 +5,8 @@ import { profilereducer } from "./reducers/profilereducer";
 import { subscriberReducer } from "./reducers/subscribeReducer.js";
 import { userreducer } from "./reducers/userReducer";
 
-export const server='http://localhost:4000'
-
+// export const server='http://localhost:4000'
+export const server = 'https://course-selling-backend.vercel.app'
 
  
 
