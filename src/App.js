@@ -104,7 +104,7 @@ function App() {
                   </ProtectedRoute>
                 }
               />
-              <Route path="/contact" element={<Contact />}></Route>
+         
               <Route path="/requestcourse" element={<Request />}></Route>
 
               {/* inside this protectedRoute , isAuthenticated

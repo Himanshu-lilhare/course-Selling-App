@@ -35,6 +35,7 @@ const Coursemodal = ({
   const [video, setvideo] = useState();
   const [videoprev, setvideoprev] = useState();
   const {loading:lectureLoading}=useSelector(state=>state.lectureReducer)
+  const {user}=useSelector(state=>state.user)
   function exitfrommodal() {
     settitle('');
     setdescription('');
@@ -90,33 +91,9 @@ const Coursemodal = ({
       <ModalContent>
         <ModalHeader textAlign={'center'}>{coursetitle}</ModalHeader>
         <ModalCloseButton onClick={exitfrommodal} />
-        <ModalBody p={['0', '16']}>
-          <Grid templateColumns={['1fr', '3fr 1fr']}>
-            <Box px={['0', '16']}>
-              {/* <Box my={'5'}>
-                <Heading children={coursetitle} />
-                <Heading children={`# ${id}`} size="sm" opacity={'0.7'} />
-              </Box> */}
-              <Heading children="lectures" size={'lg'} />
-
-              { 
-               
-              lectures && lectures.length>0 ? lectures.map((item, index) => (
-                <Videocard
-                  key={index}
-                  title={item.title}
-                  description={item.description}
-                  num={index+1}
-                  lectureid={item._id}
-                  courseid={id}
-                  deletebutton={deletelecturehandler}
-                />
-              )) : <Heading size={"md"} children="No lectures Available"/>
-            
-            }
-           
-            </Box>
-            <Box boxShadow={'1px 1px 10px 4px rgba(7, 61, 241, 0.2)'}>
+        <ModalBody p={['2', '6']}>
+          <>
+          <Box boxShadow={'1px 1px 10px 4px rgba(7, 61, 241, 0.2)'}>
 <form style={{boxShadow:'1px 1px 10px 4px rgba(7, 61, 241, 0.2)',padding:'6px 0 6px 0'}} onSubmit ={ e =>addlecturehandler(e,title,description,id,video)
 }>
         <VStack>
@@ -151,7 +128,32 @@ const Coursemodal = ({
                 
               
             </Box>
-          </Grid>
+            <Box px={['3', '7']} minH={'300px'}>
+              {/* <Box my={'5'}>
+                <Heading children={coursetitle} />
+                <Heading children={`# ${id}`} size="sm" opacity={'0.7'} />
+              </Box> */}
+              <Heading children="LECTURES" size={'lg'} mt={['5']} />
+
+              { 
+               
+              lectures && lectures.length>0 ? lectures.map((item, index) => (
+                <Videocard
+                  key={index}
+                  title={item.title}
+                  description={item.description}
+                  num={index+1}
+                  lectureid={item._id}
+                  courseid={id}
+                  deletebutton={deletelecturehandler}
+                />
+              )) : <Heading mt={'130px'} textAlign={'center'} size={"md"} children="No lectures Available"/>
+            
+            }
+           
+            </Box>
+       
+          </>
         </ModalBody>
       
       </ModalContent>

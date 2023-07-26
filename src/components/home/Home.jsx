@@ -19,14 +19,15 @@ const Home = () => {
   console.log(isauthenticate);
   return (
     <section className="home" style={{ position: 'relative' }}>
-      {isauthenticate && user && user?.role === 'testadmin' && (
+      {isauthenticate && window.location.pathname==='/' && user && user?.role === 'testadmin' && (
         <>
           <Link to="/admin/admincourses">
             <Button
-              position="absolute"
+              position="fixed"
               left={'67px'}
               top={'14px'}
               colorScheme={'blue'}
+              zIndex={'2'}
             >
               ADMIN DASHBOARD
             </Button>

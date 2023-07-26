@@ -52,11 +52,7 @@ export const Header = ({isauthenticate=false,user}) => {
       REQUEST A COURSE
       </Button>
   </Link>
-  <Link to="/contact">
-     <Button variant="ghost">
-      CONTACT US
-      </Button>
-  </Link>
+
 
   
  </VStack>

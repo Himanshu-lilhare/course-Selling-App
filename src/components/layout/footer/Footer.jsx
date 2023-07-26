@@ -48,9 +48,9 @@ const Footer = () => {
        <Text fontWeight={'400'}  fontSize={['15px','19px']} letterSpacing="1px"
        textAlign={"center"}
        >
-        @Copyrights By <span style={{fontSize:"18px",
+      Made By <span style={{fontSize:"18px",
         fontWeight:'bold',
-      color:'#1b42c9' }}>FIT CODER</span>. All Rights Reserved 
+      color:'#1b42c9' }}>Himanshu Lilhare (Raj Lilhare) #FITCODER</span> 
        </Text>
       </VStack>
       
