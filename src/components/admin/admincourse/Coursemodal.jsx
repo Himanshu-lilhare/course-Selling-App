@@ -35,7 +35,7 @@ const Coursemodal = ({
   const [video, setvideo] = useState();
   const [videoprev, setvideoprev] = useState();
   const {loading:lectureLoading}=useSelector(state=>state.lectureReducer)
-  
+  const [deleteLoading,setdeleteLoading] = useState(false)
   function exitfrommodal() {
     settitle('');
     setdescription('');
@@ -75,9 +75,13 @@ const Coursemodal = ({
           <Text children={description} />
         </Box>
         <Button
-        isLoading={lectureLoading}
+        isLoading={deleteLoading}
           colorScheme={'blue'}
-          onClick={() => deletebutton(lectureid, courseid)}
+          onClick={() =>{ 
+            setdeleteLoading(true)
+            deletebutton(lectureid, courseid) 
+          setdeleteLoading(false)
+          }}
         >
           <RiDeleteBin7Fill />
         </Button>
