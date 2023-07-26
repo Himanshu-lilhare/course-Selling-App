@@ -1,0 +1,174 @@
+.container {
+  height: 100vh;
+  padding: 5rem 1rem;
+}
+/* .home{
+  height: 250vh;
+  overflow-y: scroll;
+} */
+.bannerdiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 75vh;
+  border-radius: 0% 100% 0% 60% / 60% 0% 100% 40%;
+ 
+  border-top-right-radius: 14px;
+  background: rgb(9,9,121);
+  background: linear-gradient(208deg, rgba(9,9,121,1) 0%,
+   rgba(27,66,201,1) 47%);
+  border-top-left-radius: 14px;
+  border-bottom-right-radius: 14px;
+}
+.logodiv {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+}
+.findCourse {
+  background-color: #e0992a;
+  padding: 0.6rem 0.5rem;
+  -webkit-box-shadow: 1px 0px 17px -1px rgba(72, 72, 72, 0.75);
+-moz-box-shadow: 1px 0px 17px -1px rgba(75, 75, 75, 0.75);
+box-shadow: 1px 0px 17px -1px rgba(59, 59, 59, 0.75);
+  border-radius: 10px;
+  color: black;
+  font-weight: 500;
+}
+.findCourse:hover {
+  transition: 0.2s ease;
+  background-color: #b87e20;
+
+}
+.logoimg {
+  width: 65%;
+
+  filter: drop-shadow(0 25px 15px rgba(0, 0, 0, 0.3));
+  animation: logoimage 1s infinite ease-in-out alternate;
+}
+@keyframes logoimage {
+  to {
+    transform: translateY(-10px);
+  }
+}
+.brandbox {
+ min-height: 100vh;
+  border-radius: 10px;
+  width: 97%;
+  margin: auto;
+  color: white;
+
+  padding: 2rem 0.5rem;
+  display: flex;
+  overflow-x: hidden;
+  flex-direction: column;
+}
+
+.brandsbanner {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0px;
+  height: 170px;
+  width: calc(250px * 9);
+}
+
+.OneBrand img{
+ width:100%;
+ height: 100%;
+ object-fit:contain;
+}
+.brandsbanner:hover{
+  animation-play-state: paused;
+}
+.foreven {
+  animation: scroll 120s linear infinite;
+}
+.forodd {
+  animation: scrollx 120s linear infinite;
+}
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-100% - 50vw));
+  }
+}
+@keyframes scrollx {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+.OneBrand {
+  height: 100%;
+  min-width: 301px;
+  border: 0.1px solid rgba(245, 245, 245, 0.216);
+  margin: 0px 10px;
+  padding: 1rem;
+
+}
+.container2 {
+  display: flex;
+  justify-content: center;
+  height: 62vh;
+  width: 100%;
+}
+.container2 video {
+  width:47%;
+  height: 69%;
+  border-radius: 10px;
+  outline: none;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.36);
+}
+.bannerDetail {
+  justify-content: center;
+}
+@media screen and (max-width: 862px) {
+
+
+  
+  .OneBrand {
+    height: 81%;
+    min-width: 220px;
+  }
+  .container {
+    padding: 0.5rem 0.5rem;
+  }
+  .bannerDetail {
+    justify-content: start;
+  }
+  .bannerdiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    gap: 20px;
+  }
+  .logodiv {
+    height: 50%;
+    justify-content: center;
+  }
+  .logoimg {
+    height: 80%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .container2 video {
+    width: 100%;
+  }
+  .container2 {
+    height: 70vh;
+    width: 100%;
+  }
+  .logodiv {
+    margin-top: 40px;
+  }
+  .logoimg {
+    height: 80%;
+  }
+}

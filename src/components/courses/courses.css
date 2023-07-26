@@ -1,0 +1,114 @@
+.course {
+  max-width: 350px;
+  margin-bottom: 10.5rem;
+  height: 370px;
+  padding: 1rem;
+  position: relative;
+  border-radius: 20px;
+  box-shadow: 0 35px 80px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: flex-end;
+  border: 1px solid rgba(92, 92, 252, 0.474);
+}
+.courses {
+  margin-top: 9rem;
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.imgbx {
+  position: absolute;
+  top: -74px;
+  left: 50%;
+  transform: translate(-50%);
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.25);
+  height: 224px;
+  width: 230px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.imgbx img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+.content {
+  width: 100%;
+  height: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.details {
+  padding: 0.6rem;
+}
+
+.headDesc {
+  padding: 0.5rem 0rem;
+}
+.headDesc h3 {
+  font-weight: 500;
+  font-size: 17px;
+}
+.creator {
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.viewCreator {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+
+  padding: 1rem 0rem;
+}
+.displayFlexAndRow {
+  display: flex;
+  flex-direction: column;
+}
+.displayFlexAndRow span {
+  text-align: center;
+}
+
+.courseButton {
+  display: flex;
+  justify-content: center;
+}
+
+.course:hover {
+  transform: translateY(-10px);
+}
+
+@media (max-width: 650px) {
+
+  .imgbx{
+    height: 183px;
+    width: 180px;
+  }
+  .course{
+    height: 340px;
+    margin-bottom: 6.9rem;
+  }
+  .headDesc{
+    font-size: 13px;
+  }
+
+  /* .course {
+    justify-content: space-around;
+
+    min-width: 280px;
+    margin-bottom: 7.5rem;
+    height: 363px;
+  }
+  .imgbx {
+    height: 186px;
+    width: 200px;
+  }
+  .courseButtonReal {
+    width: 90px;
+  } */
+}

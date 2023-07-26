@@ -1,0 +1,90 @@
+export const firstRowAndLasrRow=[
+{
+    path:'/androidstudio.png'
+},
+{
+    path:'/angular.svg'
+},
+{
+    path:'/bootstrap.png'
+},
+
+{
+    path:'/cpp.png'
+},
+{
+    path:'/devops.png'
+},
+{
+    path:'/css.png'
+},
+{
+    path:'/django.png'
+},
+{
+    path:'/docker.webp'
+},
+{
+    path:'/flutter.png'
+},
+{
+    path:'/cpp.png'
+},
+{
+    path:'/javab.png'
+},
+{
+    path:'/kubernetes.png'
+},
+{
+path:'/docker.webp'
+},
+{
+    path:'/angular.svg'
+},
+
+]
+export const middleRow=[
+    {
+        path:'/webpack.png'
+    },
+    {
+        path:'/vue.png'
+    },
+    {
+        path:'/tailwind.png'
+    },
+    {
+        path:'/socket.png'
+    },
+    {
+        path:'/reactnative.png'
+    },
+    {
+        path:'/python.png'
+    },
+    {
+        path:'/postmanb.png'
+    },
+    {
+        path:'/nodejsb.png'
+    },
+    {
+        path:'/docker.webp'
+    },
+    {
+        path:'/nginx.png'
+    },
+    {
+        path:'/next.png'
+    },
+    {
+        path:'/mongodb.png'
+    },
+    {
+        path:'/nodejsb.png'
+    },
+    {
+        path:'/socket.png'
+    },
+    ]
