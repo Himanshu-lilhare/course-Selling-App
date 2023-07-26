@@ -19,7 +19,7 @@ const Home = () => {
   console.log(isauthenticate);
   return (
     <section className="home" style={{ position: 'relative' }}>
-      {isauthenticate && window.location.pathname==='/' && user && user?.role === 'testadmin' && (
+      {isauthenticate && window.location.pathname==='/' && user && user?.role === 'admin' && (
         <>
           <Link to="/admin/admincourses">
             <Button
@@ -34,11 +34,11 @@ const Home = () => {
           </Link>
         </>
       )}
-      {isauthenticate && user && user?.role === 'testadmin' && (
+      {isauthenticate && window.location.pathname==="/" && user && user?.role === 'testadmin' && (
         <>
           <Link to="/admin/admincourses">
             <Button
-              position="absolute"
+              position="fixed"
               left={'67px'}
               top={'14px'}
               colorScheme={'blue'}
