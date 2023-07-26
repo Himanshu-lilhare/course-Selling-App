@@ -11,7 +11,7 @@ import { NavLink, useLocation } from 'react-router-dom';
 function Linkbutton({ url,text,active }) {
   return (
     <NavLink to={`/admin/${url}`}>
-      <Button p={['1','2']} fontSize={['sm','larger']} colorScheme={active ? 'blue' : 'gray'}>
+      <Button p={['1','2']} fontSize={['md','larger']} colorScheme={active ? 'blue' : 'gray'}>
         {`${text}`}
       </Button>
     </NavLink>
@@ -22,7 +22,7 @@ const Slidebar = () => {
   return (
     <HStack
       boxShadow={'-2px 0 10px rgba(107,70,193,0.5)'}
-      spacing={['2','8']}
+      spacing={['8','10']}
       padding="6"
       justifyContent={"center"}
       margin={['2.5','0']}
