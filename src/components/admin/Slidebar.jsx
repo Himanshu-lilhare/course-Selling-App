@@ -1,4 +1,4 @@
-import { Button, VStack } from '@chakra-ui/react';
+import { Button, HStack, VStack } from '@chakra-ui/react';
 import React from 'react';
 import {
   RiAddCircleFill,
@@ -11,7 +11,7 @@ import { NavLink, useLocation } from 'react-router-dom';
 function Linkbutton({ url, text, icon, active }) {
   return (
     <NavLink to={`/admin/${url}`}>
-      <Button fontSize={'larger'} colorScheme={active ? 'blue' : 'gray'}>
+      <Button p={['1','2']} fontSize={['sm','larger']} colorScheme={active ? 'blue' : 'gray'}>
         {icon} {`...${text}`}
       </Button>
     </NavLink>
@@ -20,10 +20,12 @@ function Linkbutton({ url, text, icon, active }) {
 const Slidebar = () => {
   const location = useLocation();
   return (
-    <VStack
+    <HStack
       boxShadow={'-2px 0 10px rgba(107,70,193,0.5)'}
       spacing={'8'}
-      padding="16"
+      padding="6"
+      justifyContent={"center"}
+      margin={['10','0']}
     >
       <Linkbutton
         url="admincourses"
@@ -44,7 +46,7 @@ const Slidebar = () => {
         icon={<RiAddCircleFill />}
         active={location.pathname === '/admin/createcourse'}
       />
-    </VStack>
+    </HStack>
   );
 };
 

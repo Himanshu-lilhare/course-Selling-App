@@ -1,4 +1,4 @@
-import { Box, Button, Grid, Heading, HStack, Table, TableCaption, TableContainer, Tbody, Td, Th, Thead, Tr } from '@chakra-ui/react'
+import { Box, Button,Heading, HStack, Table, TableCaption, TableContainer, Tbody, Td, Th, Thead, Tr } from '@chakra-ui/react'
 import React, { useEffect } from 'react'
 import { RiDeleteBin7Fill } from 'react-icons/ri'
 import { useDispatch, useSelector } from 'react-redux'
@@ -59,11 +59,13 @@ dispatch(getAllUsers())
   return (
 loading ? <Loader /> :
 
-    <Grid minH={"100vh"} templateColumns={["1fr","5fr 1fr"]}>
+    <>
+      <Slidebar />
    <Box p={["0","16"]} overflowX="auto"
    pt={["8","16"]}
    >
-    <Heading children="ALl USERS" mb={"10px"}/>
+    <Heading children="ALL USERS" ml={['5','0']} mb={['5',"10px"]} fontSize={['large','larger']}/>
+   
     <TableContainer w={["100vw","full"]} h={'90vh'} overflowY={'scroll'}>
 <Table variant={"simple"} size="lg">
 <TableCaption>
@@ -103,8 +105,8 @@ loading ? <Loader /> :
     </TableContainer>
    </Box>
 
-<Slidebar />
-    </Grid>
+
+    </>
   )
 }
 

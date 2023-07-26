@@ -61,12 +61,12 @@ useEffect(()=>{
   }
 },[dispatch,error,message,loading,navigate])
   return (
-    <Grid minH={"100vh"} templateColumns={["1fr","5fr 1fr"]}>
-
-<Container py={"16"}>
+    <>
+<Slidebar />
+<Container py={['4',"16"]}>
   <form onSubmit={createCourseHandler}>
     <Heading children="Create Course" textTransform={"uppercase"}
-      my="16" textAlign={"center"}
+      mb="8" textAlign={"center"} fontSize={["large",'larger']}
     />
     <VStack m={"auto"} spacing="8">
     <Input
@@ -126,8 +126,8 @@ useEffect(()=>{
 
 </Container>
 
-<Slidebar />
-    </Grid>
+
+    </>
   )
 }
 

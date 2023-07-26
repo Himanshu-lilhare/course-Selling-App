@@ -114,11 +114,12 @@ if(message){
        )
   }
   return (
-    <Grid minH={"100vh"} templateColumns={["1fr","5fr 1fr"]}>
+    <>
+    <Slidebar />
    <Box p={["0","16"]} overflowX="auto"
    pt={["8","16"]}
    >
-    <Heading children="ALl USERS" mb={"10px"}/>
+    <Heading children="ALL COURSE" ml={['5','0']} mb={['5',"10px"]} fontSize={['large','larger']}/>
     <TableContainer w={["100vw","full"]}>
 <Table variant={"simple"} size="lg">
 
@@ -167,8 +168,8 @@ if(message){
     />
    </Box>
 
-<Slidebar />
-    </Grid>
+
+    </>
   )
 }
 
