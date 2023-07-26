@@ -146,7 +146,7 @@ if(message){
       Lectures
     </Th>
     <Th isNumeric>
-      Action
+      Delete
     </Th>
   </Tr>
 </Thead>
