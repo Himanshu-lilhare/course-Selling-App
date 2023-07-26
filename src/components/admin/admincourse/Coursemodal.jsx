@@ -35,7 +35,7 @@ const Coursemodal = ({
   const [video, setvideo] = useState();
   const [videoprev, setvideoprev] = useState();
   const {loading:lectureLoading}=useSelector(state=>state.lectureReducer)
-  const {user}=useSelector(state=>state.user)
+  
   function exitfrommodal() {
     settitle('');
     setdescription('');
@@ -94,7 +94,15 @@ const Coursemodal = ({
         <ModalBody p={['2', '6']}>
           <>
           <Box boxShadow={'1px 1px 10px 4px rgba(7, 61, 241, 0.2)'}>
-<form style={{boxShadow:'1px 1px 10px 4px rgba(7, 61, 241, 0.2)',padding:'6px 0 6px 0'}} onSubmit ={ e =>addlecturehandler(e,title,description,id,video)
+<form style={{boxShadow:'1px 1px 10px 4px rgba(7, 61, 241, 0.2)',padding:'6px 0 6px 0'}} onSubmit ={ (e) =>
+{
+  addlecturehandler(e,title,description,id,video)
+  settitle('')
+  setvideo('')
+  setdescription('')
+  setvideoprev('')
+}
+
 }>
         <VStack>
                   <Heading children="Add Lecture"
