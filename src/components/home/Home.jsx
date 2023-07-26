@@ -1,6 +1,6 @@
 import {
   Box,
- 
+  Button,
   Heading,
   HStack,
   Image,
@@ -11,16 +11,44 @@ import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './home.css';
 import { firstRowAndLasrRow, middleRow } from '../../utils/courseImages';
-
-
+import { RiDashboard3Fill } from 'react-icons/ri';
+import { useSelector } from 'react-redux';
 
 const Home = () => {
-
-
+  const { isauthenticate, user } = useSelector(state => state.user);
+  console.log(isauthenticate);
   return (
-    <section className="home">
+    <section className="home" style={{ position: 'relative' }}>
+      {isauthenticate && user && user?.role === 'testadmin' && (
+        <>
+          <Link to="/admin/admincourses">
+            <Button
+              position="absolute"
+              left={'67px'}
+              top={'14px'}
+              colorScheme={'blue'}
+            >
+              ADMIN DASHBOARD
+            </Button>
+          </Link>
+        </>
+      )}
+      {isauthenticate && user && user?.role === 'testadmin' && (
+        <>
+          <Link to="/admin/admincourses">
+            <Button
+              position="absolute"
+              left={'67px'}
+              top={'14px'}
+              colorScheme={'blue'}
+            >
+             ADMIN DASHBOARD
+            </Button>
+          </Link>
+        </>
+      )}
+
       <div className="container">
-   
         <div className="bannerdiv">
           <div className="logodiv">
             <Image height={'90%'} className="logoimg" src="/banner2,svg.svg" />
@@ -39,7 +67,7 @@ const Home = () => {
               size={['xl', '2xl']}
             />
             <Text
-            fontWeight={500}
+              fontWeight={500}
               color={'whiteAlpha.900'}
               textAlign={['center', 'center']}
               paddingRight={'1'}
@@ -55,7 +83,7 @@ const Home = () => {
         {/* </Stack> */}
       </div>
 
-{/* 
+      {/* 
       let content = document.querySelector('.content');
 
       content.addEventListener('animationend',function(content){animate(content)}); */}
@@ -63,40 +91,33 @@ const Home = () => {
       <Box className="brandbox">
         <div className="brandsbanner forodd">
           {firstRowAndLasrRow.map((image, index) => {
-           return <div className="OneBrand" key={index}>
-            <img src={image.path} alt="" />
-              </div> 
+            return (
+              <div className="OneBrand" key={index}>
+                <img src={image.path} alt="" />
+              </div>
+            );
           })}
-           
-              
         </div>
 
         <div className="brandsbanner foreven">
           {middleRow.map((image, index) => {
-            return <div className="OneBrand">
-    <img src={image.path} alt="" />
-            </div>;
+            return (
+              <div key={index} className="OneBrand">
+                <img src={image.path} alt="" />
+              </div>
+            );
           })}
         </div>
         <div className="brandsbanner forodd">
           {firstRowAndLasrRow.reverse().map((image, index) => {
-            return <div className="OneBrand">
-    <img src={image.path} alt="" />
-            </div>;
+            return (
+              <div key={index} className="OneBrand">
+                <img src={image.path} alt="" />
+              </div>
+            );
           })}
         </div>
       </Box>
-
-      <div className="container2">
-        <video
-          src="/intro.mp4"
-          controls
-          autoPlay
-          controlsList="nodownload  nofullscreen"
-          disablePictureInPicture
-          disableRemotePlayback
-        ></video>
-      </div>
     </section>
   );
 };

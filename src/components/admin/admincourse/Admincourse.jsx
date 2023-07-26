@@ -153,7 +153,7 @@ if(message){
 <Tbody>
   {
     course.map((ele,index)=>{
-      return <Row ele={ele} courseviewhandler={courseviewhandler} deletecoursehandler={deletecoursehandler}/>
+      return <Row key={index} ele={ele} courseviewhandler={courseviewhandler} deletecoursehandler={deletecoursehandler}/>
       
     })
   }

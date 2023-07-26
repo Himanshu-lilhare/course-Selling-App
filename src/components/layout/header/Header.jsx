@@ -57,6 +57,7 @@ export const Header = ({isauthenticate=false,user}) => {
       CONTACT US
       </Button>
   </Link>
+
   
  </VStack>
 
@@ -64,7 +65,7 @@ export const Header = ({isauthenticate=false,user}) => {
  bottom="10px" left="56px" width="100%">
   {
     isauthenticate ? (<>
-    <VStack>
+    
       <HStack>
         <Link to="/profile">
           <Button variant="ghost">
@@ -76,30 +77,8 @@ export const Header = ({isauthenticate=false,user}) => {
          LOGOUT 
         </Button>
       </HStack>
-{
-  user && user?.role === 'admin'  && <>
-          <Link to='/admin/admincourses'>
-       <Button colorScheme={"blue"}>
-        <RiDashboard3Fill style={{marginRight:"5px"}}/>
-        DASHBOARD
-        </Button>    
-          </Link>
-  </>
-  
-}
-{
-  user && user?.role === 'testadmin'  && <>
-          <Link to='/admin/admincourses'>
-       <Button colorScheme={"blue"}>
-        <RiDashboard3Fill style={{marginRight:"5px"}}/>
-        DASHBOARD
-        </Button>    
-          </Link>
-  </>
-  
-}
 
-    </VStack>
+  
     </>) : (<>
       <Link to="/login">
  <Button colorScheme={"blue"}>

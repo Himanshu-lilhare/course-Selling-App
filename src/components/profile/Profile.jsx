@@ -95,7 +95,7 @@ function cancleSubscriptionHandler(){
  const {isOpen,onClose,onOpen}=useDisclosure()
   return (
     <Container minH={'95vh'} maxW="container.lg" py={'4'}>
-      <Heading children="PROFILE" m={'*'} />
+  
       <Stack
         justifyContent={'flex-start'}
         direction={['column', 'row']}
@@ -124,12 +124,15 @@ function cancleSubscriptionHandler(){
           </HStack>
           {user.role !== 'admin' && (
             <HStack>
-              <Text children="Subscription Status : " />
+              <Text fontWeight={'bold'} children="Subscription : " />
               { user.subscription && user.subscription.status === 'active' ? (
-                <Button isLoading={loadingsubs} onClick={cancleSubscriptionHandler} children="Cancle Subscription"></Button>
+                <>
+                <Button isLoading={loadingsubs} onClick={cancleSubscriptionHandler} children="Cancle Subscription"></Button><span style={{margin:'3px'}}>(subscribe to watch lectures)</span>
+                </>
+                
               ) : (
                 <NavLink to="/subscribe">
-                  <Button colorScheme={'blue'}>Subscribe</Button>
+                  <Button colorScheme={'blue'}>Subscribe</Button><span style={{margin:'3px'}}>(subscribe to watch lectures)</span>
                 </NavLink>
               )}
             </HStack>

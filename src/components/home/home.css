@@ -111,19 +111,7 @@ box-shadow: 1px 0px 17px -1px rgba(59, 59, 59, 0.75);
   padding: 1rem;
 
 }
-.container2 {
-  display: flex;
-  justify-content: center;
-  height: 62vh;
-  width: 100%;
-}
-.container2 video {
-  width:47%;
-  height: 69%;
-  border-radius: 10px;
-  outline: none;
-  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.36);
-}
+
 .bannerDetail {
   justify-content: center;
 }
@@ -158,13 +146,7 @@ box-shadow: 1px 0px 17px -1px rgba(59, 59, 59, 0.75);
   }
 }
 @media screen and (max-width: 600px) {
-  .container2 video {
-    width: 100%;
-  }
-  .container2 {
-    height: 70vh;
-    width: 100%;
-  }
+  
   .logodiv {
     margin-top: 40px;
   }

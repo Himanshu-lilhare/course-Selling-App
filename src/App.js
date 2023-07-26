@@ -81,7 +81,7 @@ function App() {
             {/* </Suspense> */}
 
             <Routes>
-              <Route path="/" element={loading ? <Loader /> : <Home />}></Route>
+              <Route path="/" element={loading ? <Loader /> : <Home  />}></Route>
 
               <Route
                 path="/profile"
