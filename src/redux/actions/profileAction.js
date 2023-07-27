@@ -10,7 +10,7 @@ const {data}=await axios.put(`${server}/updateprofile`
     },
  withCredentials:true
 })
-console.log(data)
+
 dispatch({type:"updateProfileSuccess",payload:data.succes})
 } catch (error) {
  dispatch({type:"updateProfileFail",
@@ -28,7 +28,7 @@ export const updateProfilePictureAction= (formdata) => async dispatch =>{
         },
      withCredentials:true
     })
-    console.log(data)
+  
     dispatch({type:"updateProfilePictureSuccess",payload:data.message})
     } catch (error) {
      dispatch({type:"updateProfilePictureFail",
@@ -47,7 +47,7 @@ const {data}=await axios.put(`${server}/changepassword`
     },
  withCredentials:true
 })
-console.log(data)
+
 dispatch({type:"changePasswordSuccess",payload:data.succes})
 
 } catch (error) {
@@ -66,7 +66,7 @@ const {data}=await axios.post(`${server}/forgetpassword`
     },
  withCredentials:true
 })
-console.log(data)
+
 dispatch({type:"forgetPasswordSuccess",payload:data.succes})
 
 } catch (error) {
@@ -86,7 +86,7 @@ const {data}=await axios.put(`${server}/resetpassword/${token}`
     },
  withCredentials:true
 })
-console.log(data)
+
 dispatch({type:"resetPasswordSuccess",payload:data.succes})
 
 } catch (error) {
@@ -107,7 +107,7 @@ const {data}=await axios.delete(`${server}/removefromplaylist?id=${id}`, {
     },
  withCredentials:true
 })
-console.log(data)
+
 dispatch({type:"deletefromplaylistSuccess",payload:data.success})
 
 } catch (error) {

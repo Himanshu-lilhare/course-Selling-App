@@ -37,7 +37,7 @@ function courseviewhandler(id,title,isOpen){
   dispatch(getCoursesLectures(id))
  
   setcourseid(id)
-  console.log(courseid)
+ 
   setcoursetitle(title)
  isOpen()
  
@@ -47,16 +47,14 @@ function deletecoursehandler(id){
 }
 
 async function deletehandler(lectureid,courseid,setdeleteLoading){
-  console.log(lectureid)
-  console.log(courseid)
+ 
 await  dispatch(deleteCourseLecture(courseid,lectureid))
 dispatch(getCoursesLectures(courseid))
 }
 async function addlecturehandler(e,title,description,id,video){
   
 e.preventDefault()
-console.log(id)
-console.log(title)
+
 const myform=new FormData()
 myform.append("title",title)
 myform.append("description",description)

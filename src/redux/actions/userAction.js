@@ -4,7 +4,7 @@ export const login = (email, password) => {
   return async dispatch => {
     try {
       dispatch({ type: 'loginRequest' });
-      console.log(email, password);
+
       const { data } = await axios.post(
         `${server}/login`,
         { email, password },
@@ -15,10 +15,10 @@ export const login = (email, password) => {
           withCredentials: true,
         }
       );
-      console.log(data);
+  
       dispatch({ type: 'loginSuccess', payload: data });
     } catch (error) {
-      console.log(error);
+     
       dispatch({ type: 'loginfail', payload: error?.response?.data?.error });
     }
   };
@@ -35,10 +35,10 @@ export const registeruser = formdata => {
         },
         withCredentials: true,
       });
-      console.log(data);
+ 
       dispatch({ type: 'registerSuccess', payload: data });
     } catch (error) {
-      console.log(error.response.data.error);
+    
       dispatch({ type: 'registerfail', payload: error?.response?.data?.error});
     }
   };
@@ -64,14 +64,14 @@ export const loogut = () => {
   return async dispatch => {
     try {
       dispatch({ type: 'logoutRequest' });
-      // console.log(email,password)
+   
       const { data } = await axios.get(`${server}/logout`, {
   withCredentials: true,
       });
-      console.log(data);
+
       dispatch({ type: 'logoutSuccess', payload: data.user });
     } catch (error) {
-      console.log(error.response.data.error);
+      
       dispatch({ type: 'logoutfail', payload: error?.response?.data?.error });
     }
   };

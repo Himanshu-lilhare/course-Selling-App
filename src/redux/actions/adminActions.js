@@ -8,7 +8,7 @@ export const getStats=()=> async dispatch =>{
       withCredentials:true
       
     })
- console.log(data)
+ 
     dispatch({type:"getStatsSuccess",payload:data})  
     } catch (error) {
         dispatch({type:"getStatsFail",payload:error.response.data.error})
@@ -23,7 +23,7 @@ export const getAllUsers=()=> async dispatch =>{
         withCredentials:true
       
     })
- console.log(data)
+
     dispatch({type:"getAllUsersSuccess",payload:data.users})  
     } catch (error) {
         dispatch({type:"getAllUsersFail",payload:error.response.data.error})
@@ -40,7 +40,7 @@ export const deleteUsers=(id)=> async dispatch =>{
       withCredentials:true
       
     })
- console.log(data)
+
     dispatch({type:"deleteUsersSuccess",payload:data.success})  
     } catch (error) {
         dispatch({type:"deleteUsersFail",payload:error.response.data.error})
@@ -54,7 +54,7 @@ export const updateUsers=(id)=> async dispatch =>{
       withCredentials:true
       
     })
- console.log(data) 
+ 
     dispatch({type:"updateUsersSuccess",payload:data.success})  
     } catch (error) {
         dispatch({type:"updateUsersFail",payload:error.response.data.error})
@@ -72,7 +72,7 @@ export const createCourses=(formdata)=> async dispatch =>{
         withCredentials:true
       
     })
- console.log(data)
+
     dispatch({type:"createCourseSuccess",payload:data?.success})  
     } catch (error) {
         dispatch({type:"createCourseFail",payload:error?.response?.data?.error})

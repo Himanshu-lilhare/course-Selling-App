@@ -52,12 +52,12 @@ const Profile = ({user}) => {
 const {loading,message,error}=useSelector(state=>state.profilebeta)
 const {loading:loadingsubs,message:messagesubs,error:errorsubs}=useSelector(state=>state.subscribe)
  async function deletefromplaylist(id) {
-  console.log(id)
+  
  await dispatch(removeFromPlaylist(id))
    dispatch(getmyprofile())
 }
 async function changeimagesubmithandler(e,image){
-  console.log(image)
+  
      e.preventDefault()
      const myform=new FormData()
      myform.append("file",image)
@@ -68,7 +68,6 @@ function cancleSubscriptionHandler(){
       dispatch(cancleSubscription())
   }
 
-console.log(user?.subscription?.status)
 
   useEffect(()=>{
 
