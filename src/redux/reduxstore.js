@@ -7,7 +7,7 @@ import { userreducer } from "./reducers/userReducer";
 
 // export const server='http://localhost:4000'
 export const server = 'https://course-selling-backend.vercel.app'
-// 
+
  
 
 export const reduxstore=configureStore({
