@@ -11,7 +11,7 @@ import {
 
 } from '@chakra-ui/react';
 import { NavLink } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { login } from '../../../redux/actions/userAction';
 // import axios from 'axios';
 const Login = () => {
