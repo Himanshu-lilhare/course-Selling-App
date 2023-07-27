@@ -53,7 +53,7 @@ useEffect(() => {
         "color": "#3399cc"
     }
     }
-    console.log(options.key)
+    
 
     const razor= new window.Razorpay(options)
     razor.open()
@@ -65,7 +65,7 @@ useEffect(() => {
 
   return (
     <Container h={"100vh"} padding={["6","16"]}>
-<Heading  children="Welcome" size={"lg"} 
+<Heading  children="Hey There" size={"lg"} 
 textAlign="center"
 />
 <VStack boxShadow={"lg"}
@@ -74,20 +74,20 @@ borderRadius={"lg"}>
 <Box backgroundColor={"#3b5998"} padding="4"
 css={{borderRadius:"8px 8px 0 0 "}}
 >
-<Text color="white" children="FIT CODE PACK " fontSize={"lg"}/>
+<Text color="white" children="FIT CODING" fontSize={"lg"}/>
 </Box>
 <Box p={"4"}>
 <VStack textAlign={"center"} px="4" mt={"4"} spacing="8">
-<Text children="Join Pro Pack And Get Access To All Content"/>
-<Heading size={"md"} children="149₹ Only" />
+<Text children="Subscribe FIT CODING CAMP For Premium COntent"/>
+<Heading size={"md"} children="2₹ Only" />
 </VStack>
 <Button onClick={subscriptionHandler} isLoading={loading} my={"8"} color="white" backgroundColor={"#3b5998"} width={"full"} >
 BUY NOW
 </Button>
 </Box>
 <Box backgroundColor={"#3b5998"} p="4" css={{borderRadius:"0 0 8px 8px"}}>
-<Heading size={"sm"} children="100% Refund At Cancellation " color={"white"} textTransform="uppercase"/>
-<Text fontFamily={"xs"} color="white" children="*terms and condition apply"/>
+<Heading size={"sm"} children="Cancle SUbscription Refund Valid Only for 7 Days from Subscribe" color={"white"} textTransform="uppercase"/>
+
 </Box>
 </VStack>
     </Container>
