@@ -20,7 +20,7 @@ const Footer = React.lazy(() => import('./components/layout/footer/Footer'));
 const Resetpassword = React.lazy(() =>
   import('./components/auth/Resetpassword')
 );
-const Contact = React.lazy(() => import('./components/contact/Contact'));
+
 const Request = React.lazy(() => import('./components/contact/Request'));
 
 const Subscribe = React.lazy(() => import('./components/payments/Subscribe'));

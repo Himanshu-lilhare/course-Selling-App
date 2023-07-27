@@ -103,7 +103,7 @@ dispatch(registeruser(formdata))
             />
           </Box>
           <Box my={'4'}>
-            <FormLabel htmlFor="chooseAvatar" children="Password" />
+            <FormLabel htmlFor="chooseAvatar" children="Choose Avatar" />
             <Input
               required
               css={edit}

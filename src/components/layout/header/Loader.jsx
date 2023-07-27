@@ -7,9 +7,9 @@ const Loader = () => {
 <div style={{transform:"scale(3)"}}>
 <RotatingLines
   strokeColor="#4873da"
-  strokeWidth="5"
-  animationDuration="0.75"
-  width="70"
+  strokeWidth="3"
+  animationDuration="0.65"
+  width="50"
   visible={true}
 />
 </div>
