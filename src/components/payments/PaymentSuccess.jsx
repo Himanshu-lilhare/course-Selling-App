@@ -16,13 +16,13 @@ const PaymentSuccess = () => {
   return (
     <Container h="90vh" p="16">
       <Heading my="8" textAlign={'center'}>
-        You have Pro Pack
+        FIT CODING CAMP MEMBER
       </Heading>
 
       <VStack boxShadow={'lg'} pb="16" alignItems={'center'} borderRadius="lg">
         <Box
           w="full"
-          bg="yellow.400"
+          bg="blue.400"
           p="4"
           css={{ borderRadius: '8px 8px 0 0' }}
         >
@@ -32,8 +32,7 @@ const PaymentSuccess = () => {
         <Box p="4">
           <VStack textAlign={'center'} px="8" mt="4" spacing={'8'}>
             <Text>
-              Congratulation you're a pro member. You have access to premium
-              content.
+             Contratulations For Buy FIT CODING CAMP
             </Text>
 
             <Heading size={'4xl'}>

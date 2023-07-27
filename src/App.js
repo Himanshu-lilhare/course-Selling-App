@@ -10,6 +10,7 @@ import toast, { Toaster } from 'react-hot-toast';
 import { getmyprofile } from './redux/actions/userAction';
 import { ProtectedRoute } from 'protected-route-react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import PaymentSuccess from './components/payments/PaymentSuccess';
 
 const Header = React.lazy(() => import('./components/layout/header/Header'));
 
@@ -23,9 +24,7 @@ const Contact = React.lazy(() => import('./components/contact/Contact'));
 const Request = React.lazy(() => import('./components/contact/Request'));
 
 const Subscribe = React.lazy(() => import('./components/payments/Subscribe'));
-const Successpayment = React.lazy(() =>
-  import('./components/payments/Successpayment')
-);
+
 const Failedpayment = React.lazy(() =>
   import('./components/payments/Failedpayment')
 );
@@ -161,7 +160,7 @@ function App() {
                   </ProtectedRoute>
                 }
               />
-              <Route path="/paymentsuccess" element={<Successpayment />} />
+              <Route path="/paymentsuccess" element={<PaymentSuccess />} />
               <Route path="/failpay" element={<Failedpayment />} />
               <Route path="/*" element={<Notfound />} />
 
