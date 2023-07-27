@@ -111,7 +111,7 @@ const Coursemodal = ({
                 <VStack>
                   <Heading
                     children="Add Lecture"
-                    size="md"
+                    size="sm"
                     textTransform={'uppercase'}
                   />
                   <Input
@@ -149,7 +149,7 @@ const Coursemodal = ({
                 <Heading children={coursetitle} />
                 <Heading children={`# ${id}`} size="sm" opacity={'0.7'} />
               </Box> */}
-              <Heading children="LECTURES" size={'lg'} mt={['5']} />
+              <Heading children="ALL LECTURES" size={'sm'} mt={['5']} />
 
               {lectures && lectures.length > 0 ? (
                 lectures.map((item, index) => (
