@@ -10,7 +10,7 @@ import {
   Button,
   Avatar,
 } from '@chakra-ui/react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { registeruser } from '../../redux/actions/userAction';
 export const editvalue = {
   height: '100%',
@@ -31,6 +31,7 @@ const Register = () => {
   const [imageprev, setimageprev] = useState();
   const [image,setimage]=useState()
   const dispatch=useDispatch()
+  const {loading} = useSelector(state=>state.user)
 function registersubmit(e){
  e.preventDefault()
  const formdata=new FormData()
@@ -114,7 +115,7 @@ dispatch(registeruser(formdata))
             />
           </Box>
 
-          <Button color={"white"} my={'4'} backgroundColor="#316090" type="submit">
+          <Button isLoading={loading} color={"white"} my={'4'} backgroundColor="#316090" type="submit">
             Sign In
           </Button>
 

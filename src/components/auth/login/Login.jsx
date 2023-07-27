@@ -19,21 +19,13 @@ const Login = () => {
    const dispatch=useDispatch()
   const [email, setemail] = useState();
   const [password, setpassword] = useState();
-
+  const {loading} = useSelector(state=>state.user)
 const submitHandler= async(e)=>{
 e.preventDefault()
 
 try {
   dispatch(login(email,password))
-  // let {data}= await axios.post("http://localhost:4000/login",{email,password},
-  // {
-  //     headers:{
-  //         "Content-type" : "application/json"
-  //     },
-  //  withCredential:true
-  // }
-  // )
-  // console.log(data)
+
 } catch (error) {
   console.log(error)
 }
@@ -89,7 +81,7 @@ function loginAsTestAdmin(){
              </Button>
            </NavLink>
          </Box>
-         <Button my={'5'} mx={'3'} colorScheme="blue" type="submit">
+         <Button isLoading={loading} my={'5'} mx={'3'} colorScheme="blue" type="submit">
            Log In
          </Button>
          <Button my={'5'} colorScheme="blue" onClick={loginAsTestAdmin}>
