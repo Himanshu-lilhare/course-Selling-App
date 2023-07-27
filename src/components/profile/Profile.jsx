@@ -68,7 +68,7 @@ function cancleSubscriptionHandler(){
       dispatch(cancleSubscription())
   }
 
-
+console.log(user?.subscription?.status)
 
   useEffect(()=>{
 
@@ -109,7 +109,7 @@ function cancleSubscriptionHandler(){
             Change Photo
           </Button>
         </VStack>
-        <VStack spacing={'4'} alignItems={['center', 'flex-start']}>
+        <VStack spacing={'4'} alignItems={['flex-start', 'flex-start']}>
           <HStack>
             <Text children="Name" fontWeight={'bold'} />
             <Text children={user.name} />
@@ -124,15 +124,15 @@ function cancleSubscriptionHandler(){
           </HStack>
           {user.role !== 'admin' && (
             <HStack>
-              <Text fontWeight={'bold'} children="Subscription : " />
+             
               { user.subscription && user.subscription.status === 'active' ? (
                 <>
-                <Button isLoading={loadingsubs} onClick={cancleSubscriptionHandler} children="Cancle Subscription"></Button><span style={{margin:'3px'}}>(subscribe to watch lectures)</span>
+                <Button p={['1','3']} h={['8','10']}  isLoading={loadingsubs} onClick={cancleSubscriptionHandler} children="Cancle Subscription"></Button><span style={{margin:'3px'}}>(subscribe to watch lectures)</span>
                 </>
                 
               ) : (
                 <NavLink to="/subscribe">
-                  <Button colorScheme={'blue'}>Subscribe</Button><span style={{margin:'3px'}}>(subscribe to watch lectures)</span>
+                  <Button p={['1','3']} h={['8','10']} colorScheme={'blue'}>Subscribe</Button><span style={{margin:'3px'}}>(subscribe to watch lectures)</span>
                 </NavLink>
               )}
             </HStack>

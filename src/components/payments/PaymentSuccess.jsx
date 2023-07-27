@@ -16,7 +16,7 @@ const PaymentSuccess = () => {
   return (
     <Container h="90vh" p="16">
       <Heading my="8" textAlign={'center'}>
-        FIT CODING CAMP MEMBER
+    Contratulations 
       </Heading>
 
       <VStack boxShadow={'lg'} pb="16" alignItems={'center'} borderRadius="lg">
@@ -32,7 +32,7 @@ const PaymentSuccess = () => {
         <Box p="4">
           <VStack textAlign={'center'} px="8" mt="4" spacing={'8'}>
             <Text>
-             Contratulations For Buy FIT CODING CAMP
+           Now You Can Access Our Premium Content
             </Text>
 
             <Heading size={'4xl'}>

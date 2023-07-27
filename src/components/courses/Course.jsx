@@ -50,7 +50,7 @@ const Course = ({ item, addtocarthandler }) => {
               variant="ghost"
               onClick={() => addtocarthandler(item._id)}
             >
-              ADD TO CART
+              ADD TO PLAYLIST
             </Button>
           </div>
         </div>

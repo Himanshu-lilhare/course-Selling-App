@@ -46,7 +46,7 @@ function deletecoursehandler(id){
    dispatch(deleteCourses(id))
 }
 
-async function deletehandler(lectureid,courseid){
+async function deletehandler(lectureid,courseid,setdeleteLoading){
   console.log(lectureid)
   console.log(courseid)
 await  dispatch(deleteCourseLecture(courseid,lectureid))

@@ -122,10 +122,12 @@ export const deleteCourseLecture=(courseid,lectureid)=> async dispatch =>{
         withCredentials:true
       
     })
- console.log(data)
+
     dispatch({type:"deleteLectureSuccess",payload:data.success})  
+
     } catch (error) {
         dispatch({type:"deleteLectureFail",payload:error.response.data.error})
+     
     }
   
 } 

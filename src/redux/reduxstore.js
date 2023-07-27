@@ -1,5 +1,5 @@
 import { configureStore } from "@reduxjs/toolkit";
-import { adminReducer, lectureReducer } from "./reducers/adminReducer";
+import { adminReducer } from "./reducers/adminReducer";
 import { addToCartReducer, courseReducer } from "./reducers/courseReducer";
 import { profilereducer } from "./reducers/profilereducer";
 import { subscriberReducer } from "./reducers/subscribeReducer.js";
@@ -18,6 +18,6 @@ export const reduxstore=configureStore({
     admin:adminReducer,
     subscribe:subscriberReducer,
     addToCartReducer:addToCartReducer,
-    lectureReducer:lectureReducer
+ 
     }
 })

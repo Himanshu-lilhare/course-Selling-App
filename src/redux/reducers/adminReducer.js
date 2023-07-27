@@ -92,38 +92,15 @@ import { createReducer } from "@reduxjs/toolkit";
         state.loading=false
         state.error=action.payload
     },
-    // deleteLectureRequest:(state)=>{
-    //     state.loading=true
-    // },
-    // deleteLectureSuccess:(state,action)=>{
-    //     state.loading=false
-    //     state.message=action.payload
-    // },
-    // deleteLectureFail:(state,action)=>{
-    //     state.loading=false
-    //     state.error=action.payload
-    // },
-    clearmessage:(state)=>{
-        state.message=null
-    },
-    clearerror:(state)=>{
-        state.error=null
-    }
-
-   })
-
-  export const lectureReducer =createReducer({users:[]},{
-     
-  
     deleteLectureRequest:(state)=>{
-        state.loading=true
+        state.deleteloading=true
     },
     deleteLectureSuccess:(state,action)=>{
-        state.loading=false
+        state.deleteloading=false
         state.message=action.payload
     },
     deleteLectureFail:(state,action)=>{
-        state.loading=false
+        state.deleteloading=false
         state.error=action.payload
     },
     clearmessage:(state)=>{
@@ -134,3 +111,4 @@ import { createReducer } from "@reduxjs/toolkit";
     }
 
    })
+
