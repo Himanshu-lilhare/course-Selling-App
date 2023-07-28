@@ -25,13 +25,13 @@ const Footer = () => {
         fontSize="40"
         marginTop={'10'}
       >
-        <a className='footerIcons' href="https://www.instagram.com/rajlilhare27/" rel='noreferrer' target='_blank'>
+        <a className='footerIcons' href="https://www.linkedin.com/in/himanshu-lilhare-41b631227/" rel='noreferrer' target='_blank'>
           <TiSocialLinkedinCircular style={{backgroundColor:'#1b42c9'}} />
         </a>
-        <a className='footerIcons' href="https://www.instagram.com/rajlilhare27/" rel='noreferrer' target='_blank'>
+        <a className='footerIcons' href="https://twitter.com/rajlilhare200" rel='noreferrer' target='_blank'>
           <TiSocialTwitterCircular style={{backgroundColor:'#1b42c9'}} />
         </a>
-        <a className='footerIcons' href="https://www.instagram.com/rajlilhare27/" rel='noreferrer' target='_blank'>
+        <a className='footerIcons' href="https://github.com/Himanshu-lilhare" rel='noreferrer' target='_blank'>
           <TiSocialGithubCircular style={{backgroundColor:'#1b42c9'}} />
         </a>
         <a className='footerIcons' href="https://www.instagram.com/rajlilhare27/" rel='noreferrer' target='_blank'>
